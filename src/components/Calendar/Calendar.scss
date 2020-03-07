@@ -1,0 +1,213 @@
+@import '../../assets/css/variables';
+
+.Calendar {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        span {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+
+        .news {
+            flex: 0 1 25%;
+            height: 320px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 20px 20px 20px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: .4s all;
+
+            h3 {
+                margin: 12px 0;
+                color: $brandColor;
+                text-transform: uppercase;
+            }
+
+            p {
+                margin: 0
+            }
+
+            &:nth-child(2) {
+                background-color: $darkestBackground;
+            }
+
+            &:hover {
+                border-bottom: 15px solid $brandColor;
+            }
+        }
+
+        .location {
+            flex: 0 1 50%;
+            display: flex;
+            align-items: center;
+            background-image: url('../../assets/images/map.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -252px;
+            background-position-x: 0;
+            cursor: pointer;
+            transition: .4s all;
+
+            &:nth-child(1) {
+                background-position-y: -52px;
+                background-position-x: 50px;
+                border-top: 2px solid #fff;
+            }
+
+            &:hover {
+                background-color: darken($backgroundColor, 10);
+            }
+        }
+
+        .location-content {
+            padding: 0 20px;
+        
+            h3 {
+                margin: 12px 0 4px 0;
+                font-family: 'Anton';
+                font-size: 1.5em;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: $brandColor;
+            }
+        
+            h4 {
+                margin: 0 0 12px 0;
+                font-family: 'Fjalla One';
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+        
+            p {
+                margin: 0;
+            }
+        }
+
+        .banner {
+            flex: 0 1 50%;
+            background-image: url('../../assets/images/sailoring.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            flex: 0 1 50%;
+
+            .location {
+                flex: 0 1 100%;
+                height: 250px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                height: 200px;
+            }
+
+            .image {
+                flex: 0 1 50%;
+                background-color: $brandColor;
+
+                &:nth-child(1) {
+                    background-image: url('../../assets/images/flag.jpg');
+                    background-size: cover;
+                }
+
+                &:nth-child(2) {
+                    background-image: url('../../assets/images/sailors2.jpg');
+                    background-size: cover;
+                }
+            }
+        }
+
+        .events {
+            flex: 0 1 50%;
+            height: 230px;
+            background-color: $darkestBackground;
+            font-family: 'Fjalla One';
+            text-align: center; 
+            color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+
+            h3 {
+                margin: 0;
+                margin-top: 75px;
+            }
+
+            img {
+                width: 100%;
+                min-height: 230px;
+                opacity: .25;
+                transform: translate3d(0px, 90px, 0px);
+                transition: transform .4s ease-in-out;
+            }
+
+            svg {
+                font-size: 1.6em;
+            }
+
+            &:hover > img {
+                transform: translate3d(0px, -158px, 0px);
+            }
+        }
+
+        &:nth-child(1) {
+            margin-top: -66px;
+        }
+    }
+}
+
+@media (max-width: 985px) {
+    .Calendar {
+        .row {
+            .news {
+                flex: 0 1 50%;
+            }
+    
+            .location {
+                flex: 0 1 100%;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width: 910px) {
+    .Calendar {
+        .row {
+            .banner {
+                flex: 0 1 100%;
+                height: 350px;
+            }
+    
+            .content {
+                flex: 0 1 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .Calendar .row .events {
+        img {
+            width: 130%;
+        }
+    }
+}
+
+@media (max-width: 515px) {
+    .Calendar .row .events {
+        img {
+            width: 160%;
+        }
+    }
+}

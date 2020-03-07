@@ -1,0 +1,28 @@
+.About {
+    padding: 50px 0 0 0;
+    background-color: #fff;
+
+    .content {
+        width: 86%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 0 0;
+    }
+
+    .side {
+        flex: 0 1 48%;
+    }
+
+    .checkpoints {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .About .content {
+        display: block;
+    }
+}

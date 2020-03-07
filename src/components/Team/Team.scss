@@ -1,0 +1,52 @@
+@import '../../assets/css/variables';
+
+.Team {
+    background-color: $darkestBackground;
+    color: #fff;
+    padding: 50px 0 0 0;
+
+    &:before {
+        width: 100%;
+        max-width: 1400px;
+        content: "";
+        display: block;
+        height: 85px;
+        position: absolute;
+        margin-top: -90px;
+        transform: skewY(-3.5deg);
+        background-color: $darkestBackground;
+        z-index: 2;
+    }
+}
+
+.people {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 0 0 0;
+}
+
+@media (max-width: 980px) {
+    .Team:before {
+        margin-top: -84px;
+    }
+}
+
+@media (max-width: 815px) {
+    .Team:before {
+        margin-top: -78px;
+    }
+}
+
+@media (max-width: 650px) {
+    .Team:before {
+        margin-top: -72px;
+        height: 68px;
+    }
+}
+
+@media (max-width: 520px) {
+    .Team:before {
+        margin-top: -68px;
+    }
+}

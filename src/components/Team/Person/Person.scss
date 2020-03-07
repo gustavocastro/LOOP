@@ -1,0 +1,76 @@
+@import '../../../assets/css/variables';
+
+.Person {
+    flex: 0 1 25%;
+    height: 150px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        min-height: 100%;
+        transform: translate3d(0, -150px, 0);
+        filter: grayscale(100%);
+    }
+
+    &:hover > .details {
+        opacity: 1;
+    }
+
+    &:hover > img {
+        transform: translate3d(0, 0, 0);
+        filter: grayscale(0%);
+    }
+}
+
+.details {
+    width: 25%;
+    max-width: 350px;
+    height: 150px;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+    color: $textColor;
+    opacity: 0;
+    transition: .4s ease-in-out;
+
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 920px) {
+    .Person {
+        flex: 0 1 33.33%;
+    }
+
+    .details {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 730px) {
+    .Person {
+        flex: 0 1 50%;
+    }
+
+    .details {
+        width: 50%;
+    }
+}
+
+@media (max-width: 515px) {
+    .Person {
+        flex: 0 1 100%;
+        height: 250px;
+
+        img {
+            transform: translate3d(0, -250px, 0);
+        }
+    }
+
+    .details {
+        width: 100%;
+        height: 250px;
+    }
+}

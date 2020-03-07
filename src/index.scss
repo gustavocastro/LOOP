@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Quicksand|Fjalla+One|Playfair+Display|Raleway&display=swap');
+@import './assets/css/variables';
+
+body {
+  margin: 0;
+  font-family: 'Quicksand';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e5eaee;
+  color: $textColor;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Anton';
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: 'Raleway'
+}
+
+.headers {
+  text-align: center;
+
+  h2 {
+    font-family: 'Fjalla One';
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin: 0 0 4px 0;
+    color: $brandColor;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: 10px auto;
+    background-color: $headerLineColor;
+  }
+}
