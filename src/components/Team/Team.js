@@ -6,7 +6,7 @@ import './Team.scss'
 
 const Team = () => {
     return (
-        <div className="Team">
+        <div className="Team" id="crew">
             <div className="headers">
                 <h2>Unser Team</h2>
                 <h4>Subtitles Von Unserem Team</h4>

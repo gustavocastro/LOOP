@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Quicksand|Fjalla+One|Playfair+Display|Raleway&display=swap');
 @import './assets/css/variables';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Quicksand';

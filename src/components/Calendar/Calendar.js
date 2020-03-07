@@ -7,7 +7,7 @@ import sailorsImg from '../../assets/images/sailors-cropped.jpg'
 
 const Calendar = () => {
     return (
-        <div className="Calendar">
+        <div className="Calendar" id="calendar">
             <div className="row">
                 <div className="news">
                     <div className="news-content">

@@ -15,16 +15,25 @@ class Toolbar extends Component {
         this.setState({ open: !this.state.open })
     }
 
+    handleLinkClick = id => {
+        let padding = 0
+        if (id === "about" || id === "crew")
+            padding = 45
+
+        const elementPosition = document.getElementById(id).offsetTop - padding
+        window.scrollTo(0, elementPosition)
+    }
+
     render() {
         return (
             <div className="Toolbar">
                 <nav className={this.state.open ? 'openNav' : 'closeNav'}>
                     <Fade>
                     <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Crew</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a onClick={() => this.handleLinkClick("calendar")}>Gallery</a></li>
+                        <li><a onClick={() => this.handleLinkClick("about")}>About us</a></li>
+                        <li><a onClick={() => this.handleLinkClick("crew")}>Crew</a></li>
+                        <li><a onClick={() => this.handleLinkClick("contact")}>Kontakt</a></li>
                     </ul>
                     </Fade>
                 </nav>

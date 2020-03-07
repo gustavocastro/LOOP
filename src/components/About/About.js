@@ -6,7 +6,7 @@ import checkpointsImg from '../../assets/images/checkpoints2.png'
 
 const About = () => {
     return (
-        <div className="About">
+        <div className="About" id="about">
             <div className="headers">
                 <h2>About us</h2>
                 <h4>Subtitle Lorem Ipsum</h4>

@@ -9,7 +9,7 @@ import logoImg6 from '../../assets/images/logos/logo-6.png'
 
 const Contact = () => {
     return (
-        <div className="Contact">
+        <div className="Contact" id="contact">
             <div className="message">
                 <Fade left>
                     <h3>Kontakt</h3>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Fade } from 'react-reveal'
 
 import './Person.scss'
 
